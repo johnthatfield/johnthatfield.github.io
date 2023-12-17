@@ -2,14 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://example.org/projects/bmu/</loc>
+    <lastmod>2023-12-17T16:56:51+01:00</lastmod>
+  </url><url>
+    <loc>https://example.org/projects/pcb-fitout/</loc>
+    <lastmod>2023-12-17T16:56:51+01:00</lastmod>
+  </url><url>
+    <loc>https://example.org/projects/cmu/</loc>
+    <lastmod>2023-12-17T16:56:51+01:00</lastmod>
+  </url><url>
+    <loc>https://example.org/projects/coffeemate/</loc>
+    <lastmod>2023-12-17T16:56:51+01:00</lastmod>
+  </url><url>
     <loc>https://example.org/</loc>
-    <lastmod>2023-12-17T13:48:07+01:00</lastmod>
+    <lastmod>2023-12-17T16:56:51+01:00</lastmod>
   </url><url>
-    <loc>https://example.org/project/</loc>
-    <lastmod>2023-12-17T13:48:07+01:00</lastmod>
+    <loc>https://example.org/projects/</loc>
+    <lastmod>2023-12-17T16:56:51+01:00</lastmod>
   </url><url>
-    <loc>https://example.org/project/inverter/</loc>
-    <lastmod>2023-12-17T13:48:07+01:00</lastmod>
+    <loc>https://example.org/projects/inverter/</loc>
+    <lastmod>2023-12-17T16:56:51+01:00</lastmod>
+  </url><url>
+    <loc>https://example.org/projects/tsal/</loc>
+    <lastmod>2023-12-17T16:56:51+01:00</lastmod>
+  </url><url>
+    <loc>https://example.org/projects/vcu/</loc>
+    <lastmod>2023-12-17T16:56:51+01:00</lastmod>
   </url><url>
     <loc>https://example.org/categories/</loc>
   </url><url>

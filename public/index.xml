@@ -6,14 +6,56 @@
     <description>Recent content on John Hatfield Portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Dec 2023 13:48:07 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 17 Dec 2023 16:56:51 +0100</lastBuildDate>
     <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>SiC Inverter for QUT Motorsport</title>
-      <link>https://example.org/project/inverter/</link>
-      <pubDate>Sun, 17 Dec 2023 13:48:07 +0100</pubDate>
-      <guid>https://example.org/project/inverter/</guid>
-      <description>Test</description>
+      <title>Battery Management Unit (BMU)</title>
+      <link>https://example.org/projects/bmu/</link>
+      <pubDate>Sun, 17 Dec 2023 16:56:51 +0100</pubDate>
+      <guid>https://example.org/projects/bmu/</guid>
+      <description>Coming Soon </description>
+    </item>
+    <item>
+      <title>Battery PCB Fitout</title>
+      <link>https://example.org/projects/pcb-fitout/</link>
+      <pubDate>Sun, 17 Dec 2023 16:56:51 +0100</pubDate>
+      <guid>https://example.org/projects/pcb-fitout/</guid>
+      <description>Coming Soon </description>
+    </item>
+    <item>
+      <title>Cell Monitoring Unit (CMU)</title>
+      <link>https://example.org/projects/cmu/</link>
+      <pubDate>Sun, 17 Dec 2023 16:56:51 +0100</pubDate>
+      <guid>https://example.org/projects/cmu/</guid>
+      <description>Coming Soon </description>
+    </item>
+    <item>
+      <title>CoffeeMate Coffee Ecosystem</title>
+      <link>https://example.org/projects/coffeemate/</link>
+      <pubDate>Sun, 17 Dec 2023 16:56:51 +0100</pubDate>
+      <guid>https://example.org/projects/coffeemate/</guid>
+      <description>Coming Soon </description>
+    </item>
+    <item>
+      <title>SiC Inverter - Honours Thesis - QUT Motorsport</title>
+      <link>https://example.org/projects/inverter/</link>
+      <pubDate>Sun, 17 Dec 2023 16:56:51 +0100</pubDate>
+      <guid>https://example.org/projects/inverter/</guid>
+      <description>Coming Soon </description>
+    </item>
+    <item>
+      <title>Tractive System Active Light (TSAL)</title>
+      <link>https://example.org/projects/tsal/</link>
+      <pubDate>Sun, 17 Dec 2023 16:56:51 +0100</pubDate>
+      <guid>https://example.org/projects/tsal/</guid>
+      <description>Coming Soon </description>
+    </item>
+    <item>
+      <title>Vehicle Control Unit (VCU)</title>
+      <link>https://example.org/projects/vcu/</link>
+      <pubDate>Sun, 17 Dec 2023 16:56:51 +0100</pubDate>
+      <guid>https://example.org/projects/vcu/</guid>
+      <description>Coming Soon </description>
     </item>
   </channel>
 </rss>

@@ -216,6 +216,20 @@ params:
 
           In July 2021 I returned to the product support and maintenance capability, where I led the development of a Fleet Planning tool. This web tool involved a simulation and optimiser, enabling fleet planners to simulate different scenarios, comparing performance and maintenance. In late 2022 during the development of this tool, I was promoted to Support System Technologist.
 
+      - job: "Sales & Bicycle Mechanic & IT"
+        company: "Rival Bikes"
+        companyUrl: "https://rivalbikes.com.au/"
+        date: "March 2016 - March 2019"
+        info:
+          enable: false
+        featuredLink:
+          enable: false
+        content: |
+          Bike and product sales
+          Bicycle mechanics
+          IT Platform Management and upgrades. Point of sales systems upgrade. 
+          Sales data analysis
+
       # - job: "UI/UX Designer"
       #   company: "Netflix"
       #   companyUrl: "https://example.com"
@@ -305,9 +319,6 @@ params:
 
   # projects
   projects:
-    # don't show other pages here, only ones specifically below
-    showInHome: false
-
     enable: true
     # title: "Custom Name"
     items:
@@ -371,7 +382,7 @@ params:
         image: /images/projects/CMU.jpg
         featured:
           name: More Information
-          link: ./projects/tsal
+          link: ./projects/cmu
         badges:
           - Electronics
           - Altium
@@ -406,9 +417,9 @@ params:
       - title: Motor Control Communication Isolation
         content: Isolated CAN interface and hall transceiver board. 
         image: /images/projects/mciso.jpg
-        featured:
-          name: More Information
-          link: ./projects/mciso
+        # featured:
+        #   name: More Information
+        #   link: ./projects/mciso
         badges:
           - Electronics
           - Altium
@@ -417,13 +428,12 @@ params:
       - title: QEV-3 Harness Upgrade
         content: Isolated CAN interface and hall transceiver board. 
         image: /images/projects/harness chain integration.jpg
-        featured:
-          name: More Information
-          link: ./projects/mciso
+        # featured:
+        #   name: More Information
+        #   link: ./projects/mciso
         badges:
-          - Electronics
-          - Altium
-          - 2 Layer
+          - Deutsch
+          - Rapid Harness
 
 
       - title: Motor Dyno Testing
@@ -442,9 +452,9 @@ params:
   contact:
     enable: true
     # title: "Custom Name"
-    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
-    email: gurusabarisha@gmail.com
-    btnName: Mail me
+    # content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    email: johnh@hattech.com.au
+    btnName: Email me
     # formspree:
     #   enable: true # `contact.email` value will be ignored
     #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
@@ -456,14 +466,12 @@ params:
       path: "blogs"
       count: 3
       title: Recent Posts
-      enable: true
+      enable: false
       disableFeaturedImage: false
     socialNetworks:
-      github: https://github.com
-      linkedin: https://linkedin.com
-      twitter: https://twitter.com
-      instagram: https://instagram.com
-      facebook: https://facebook.com
+      github: https://github.com/johnthatfield/
+      linkedin: https://www.linkedin.com/in/jhatfield2/
+      substack: https://johnhatfield.substack.com/
 
   # List pages like blogs and posts
   listPages:
