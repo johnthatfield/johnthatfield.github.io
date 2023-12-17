@@ -113,11 +113,11 @@ params:
       enable : true
       showOnScrollUp : true
     menus:
-      disableAbout: false
+      disableAbout: true
       disableExperience: false
       disableEducation: false
       disableProjects: false
-      disableAchievements: false
+      disableAchievements: true
       disableContact: false
 
   # Hero
@@ -351,7 +351,7 @@ params:
           - USB
           - Pick and Place Assembly
         links:
-          - icon: fab fa-link
+          - icon: fa fa-link
             url: https://johnhatfield.substack.com/p/electric-vehicle-control-unit
 
       - title: Tractive System Active Light (TSAL)
