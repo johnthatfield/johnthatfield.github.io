@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on John Hatfield Portfolio</title>
+    <link>https://example.org/projects/</link>
+    <description>Recent content in Projects on John Hatfield Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 17 Dec 2023 16:56:51 +0100</lastBuildDate>
+    <atom:link href="https://example.org/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Battery Management Unit (BMU)</title>
+      <link>https://example.org/projects/bmu/</link>
+      <pubDate>Sun, 17 Dec 2023 16:56:51 +0100</pubDate>
+      <guid>https://example.org/projects/bmu/</guid>
+      <description>Coming Soon </description>
+    </item>
+    <item>
+      <title>Battery PCB Fitout</title>
+      <link>https://example.org/projects/pcb-fitout/</link>
+      <pubDate>Sun, 17 Dec 2023 16:56:51 +0100</pubDate>
+      <guid>https://example.org/projects/pcb-fitout/</guid>
+      <description>Coming Soon </description>
+    </item>
+    <item>
+      <title>Cell Monitoring Unit (CMU)</title>
+      <link>https://example.org/projects/cmu/</link>
+      <pubDate>Sun, 17 Dec 2023 16:56:51 +0100</pubDate>
+      <guid>https://example.org/projects/cmu/</guid>
+      <description>Coming Soon </description>
+    </item>
+    <item>
+      <title>CoffeeMate Coffee Ecosystem</title>
+      <link>https://example.org/projects/coffeemate/</link>
+      <pubDate>Sun, 17 Dec 2023 16:56:51 +0100</pubDate>
+      <guid>https://example.org/projects/coffeemate/</guid>
+      <description>Coming Soon </description>
+    </item>
+    <item>
+      <title>SiC Inverter - Honours Thesis - QUT Motorsport</title>
+      <link>https://example.org/projects/inverter/</link>
+      <pubDate>Sun, 17 Dec 2023 16:56:51 +0100</pubDate>
+      <guid>https://example.org/projects/inverter/</guid>
+      <description>Introduction FSAE vehicles, such as the QUT Motorsport vehicle, use four motors, one in each motor hub. This enables better delivery of torque and torque vectoring. As a result, these already small vehicles now have 4 relatively low powered motors. There are some existing solutions used by teams, such as the Bucher 60kW dual control unit, the Sevcon HVLP 20, and the VESC 100/250. However, these drives are made for auxiliary pumps and fans in larger buses and tractors, not meeting the packaging or performance requirements, or in the case of the VESC, designed for a skateboard, and so lacks the isolated safety requirements.</description>
+    </item>
+    <item>
+      <title>Tractive System Active Light (TSAL)</title>
+      <link>https://example.org/projects/tsal/</link>
+      <pubDate>Sun, 17 Dec 2023 16:56:51 +0100</pubDate>
+      <guid>https://example.org/projects/tsal/</guid>
+      <description>Introduction The tractive system active light (TSAL) in FSAE requires a flashing red light on top of the vehicle when the bus voltage is greater than 60V. When the voltage is below zero the light should be solid green indicating a safe state.&#xA;The TSAL must be visible in daylight from a distance, meaning fairly high powered LEDs are required. The team has an LED board designed for the top of the vehicle which requires 600mA.</description>
+    </item>
+    <item>
+      <title>Vehicle Control Unit (VCU)</title>
+      <link>https://example.org/projects/vcu/</link>
+      <pubDate>Sun, 17 Dec 2023 16:56:51 +0100</pubDate>
+      <guid>https://example.org/projects/vcu/</guid>
+      <description>Introduction The vehicle control unit makes all of the decisions in the car. It reads the pedals, the brake pressure, the driver inputs and any other analog or resistive sensor in the vheicle. It receives an abundance of data over the CANbus about performance and temperatures of other vehicle aspects. It runs the traction control algorithms. It’s responsible for the control and power of the brake lights, pumps and cooling fans.</description>
+    </item>
+  </channel>
+</rss>
