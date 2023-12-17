@@ -191,9 +191,9 @@ params:
         info:
           enable: false
         content: |
-          After joining QUT Motorsport at the end of 2020 I quickly took on the responsbility of Tractive System Lead Engineer, and then Electrical Team Lead. 
+          After joining QUT Motorsport at the end of 2020 I quickly took on the responsibility of Tractive System Lead Engineer, and then Electrical Team Lead. 
 
-          During my time as Tractive System Lead Engineer, I was responsible for integrating the inverters and motors into <a href="https://qutmotorsport.com/qev-3d/" target="_blank">QEV-3</a>. QEV-3 has seen many iterations and upgrades of it's 72V tractive system, and has proven to be a reliable test platform. It is currently being used by the Driverless team as a fully autonomous vehicle.
+          During my time as Tractive System Lead Engineer, I was responsible for integrating the inverters and motors into <a href="https://qutmotorsport.com/qev-3d/" target="_blank">QEV-3</a>. QEV-3 has seen many iterations and upgrades of its 72V tractive system and has proven to be a reliable test platform. It is currently being used by the Driverless team as a fully autonomous vehicle.
           
           As the Electrical Team Lead I was responsible for overseeing the design of all vehicle systems of our new vehicle, <a href="https://qutmotorsport.com/qev-4/" target="_blank">QEV-4</a>. This included:
           - Design of low voltage control and 600V electronics, including our teams <a href="https://johnhatfield.substack.com/p/electric-vehicle-control-unit" target="_blank">vehicle control unit (VCU)</a>. Altium Designer.
@@ -212,13 +212,9 @@ params:
         content: |
           I joined Boeing Defence Australia in April 2019 as an intern in the product support and maintenance capability. I worked on a variety of data analysis, modelling and simulation projects, supporting Boeing's different sustainment programs.
 
-          In 2020 I took a 6 month stint to work in <a href="https://www.boeing.com.au/products-services/Defense-Space-Security/currawong.page" target="_blank">Project Currawong</a>, performing integration testing and debugging on deployable communications hardware.
+          In January 2021 I took a 6 month stint to work in <a href="https://www.boeing.com.au/products-services/Defense-Space-Security/currawong.page" target="_blank">Project Currawong</a>, performing integration testing and debugging on deployable communications hardware.
 
-
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
+          In July 2021 I returned to the product support and maintenance capability, where I led the development of a Fleet Planning tool. This web tool involved a simulation and optimiser, enabling fleet planners to simulate different scenarios, comparing performance and maintenance. In late 2022 during the development of this tool, I was promoted to Support System Technologist.
 
       # - job: "UI/UX Designer"
       #   company: "Netflix"
@@ -245,46 +241,49 @@ params:
     # title: "Custom Name"
     index: false
     items:
-      - title: "Master of Business Administration"
+      - title: "Bachelor of Engineering (Mechatronics) (Honours) and Bachelor of Information Technology (Computer Science)"
         school:
-          name: "University of California, Berkeley"
-          url: "https://example.org"
-        date: "2013 - 2015"
-        GPA: "3.8 out of 5.0"
+          name: "Queensland University of Technology, Australia"
+          url: "https://www.qut.edu.au/"
+        date: "2018 - June 2023"
+        GPA: "6.725 out of 7.0 | First Class Honours"
         content: |-
-          Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-      - title: "Bachelor of Science in Computer Science"
-        school:
-          name: "Massachusetts Institute of Technology"
-          url: "https://example.org"
-        date: "2009 - 2013"
-        GPA: "3.9 out of 5.0"
-        content: |-
-          I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
-          - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
-          - Face mask detection using a single convolutional neural network.
+          Activities and societies:
+          - Dean's Scholars Program
+          - QUT Motorsport Electrical team Lead
+          - QUT Cycling Club & QUTcc x Ronde Racing Team - 2020 Treasurer, 2021 Secretary 
+          - QUT Foundry, QUT Starters - QUT Hatch 4.0
+          - College of Excellence
+      # - title: "Bachelor of Science in Computer Science"
+      #   school:
+      #     name: "Massachusetts Institute of Technology"
+      #     url: "https://example.org"
+      #   date: "2009 - 2013"
+      #   GPA: "3.9 out of 5.0"
+      #   content: |-
+      #     I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
+      #     - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
+      #     - Face mask detection using a single convolutional neural network.
 
-          Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-        featuredLink:
-          enable: true
-          name: "My academic record"
-          url: "https://example.com"
-      - title: "High School"
-        school:
-          name: "Thomas Jefferson High School for Science and Technology."
-          url: "https://example.org"
-        GPA: "4.2 out of 5.0"
-        featuredLink:
-          enable: true
-          url: "https://example.com"
+      #     Extracurricular Activities
+      #       - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      #       - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+      #   featuredLink:
+      #     enable: true
+      #     name: "My academic record"
+      #     url: "https://example.com"
+      # - title: "High School"
+      #   school:
+      #     name: "Cannon Hill Anglican College"
+      #     url: "https://www.chac.qld.edu.au/"
+      #   GPA: "OP 2"
+        # featuredLink:
+        #   enable: true
+        #   url: "https://example.com"
 
   # Achievements
   achievements:
-    enable: true
+    enable: false
     # title: "Custom Name"
     items:
       - title: Google kickstart runner
@@ -306,53 +305,138 @@ params:
 
   # projects
   projects:
+    # don't show other pages here, only ones specifically below
+    showInHome: false
+
     enable: true
     # title: "Custom Name"
     items:
-      - title: Hugo Profile
-        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
-        image: /images/projects/profile.png
+      - title: SiC Inverter - Honours Thesis
+        content: A 600V silicon carbide motor drive I developed for my honours thesis in collaboration with QUT Motorsport. 
+        image: /images/projects/inverter.jpg
         featured:
-          name: Demo
-          link: https://hugo-profile.netlify.app
+          name: More Information
+          link: ./projects/inverter/
         badges:
-          - "Hugo"
-          - "Bootstrap"
-          - "Javascript"
+          - "Electronics"
+          - "Altium"
+          - "LT Spice"
+          - "C"
+          - "High Voltage PCB Design"
+          - "Test Measurement"
+          
+      - title: Vehicle Control Unit (VCU)
+        content: A modular VCU - multiple units placed near sensors and loads, connected by a chained CANbus/power network. The VCU reads analog sensors, resistive sensors and drives high side loads such as fans and pumps.
+        image: /images/projects/vcu.jpg
+        featured:
+          name: More Information
+          link: ./projects/vcu/
+        badges:
+          - Electronics
+          - Altium
+          - 4 Layer
+          - CAN
+          - SPI
+          - USB
+          - Pick and Place Assembly
         links:
-          - icon: fa fa-envelope
-            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
-          - icon: fab fa-github
-            url: https://github.com/gurusabarish/hugo-profile
-          - icon: fab fa-twitter
-            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+          - icon: fab fa-link
+            url: https://johnhatfield.substack.com/p/electric-vehicle-control-unit
 
-      - title: Image Converter
-        content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
-        image: /images/projects/converter.jpg
+      - title: Tractive System Active Light (TSAL)
+        content: LED drivers to output a flashing red or solid green driver line depending on measured DC bus voltage. 
+        image: /images/projects/TSAL.jpg
         featured:
-          name: Demo
-          link: https://django-converter.herokuapp.com
+          name: More Information
+          link: ./projects/tsal
         badges:
-          - "Django"
-          - "Bootstrap"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/gurusabarish/converter
+          - Electronics
+          - Altium
+          - High Voltage
 
-      - title: Hugo Profile V2
-        content: A clean and simple Hugo template for personal portfolio and blog.
-        image: /images/projects/profile2.jpg
+      - title: Battery Management Unit (BMU)
+        content: Controls cell monitoring units (CMUs) over IsoSPI. Lowside control of DC contactors for high current and precharge. Battery safety system detection circuits - insulation monitoring device, connector interlocks, battery status. SD card for contious battery data logging. 
+        image: /images/projects/BMU.jpg
         featured:
-          name: Demo V2
-          link: https://hugo-profile-2.netlify.app
+          name: More Information
+          link: ./projects/bmu
         badges:
-          - "Hugo"
-          - "Bootstrap"
-          - "Javascript"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/gurusabarish/HugoProfileV2
+          - Electronics
+          - Altium
+          - Microcontroller
+          - 4 Layer
+
+      - title: Cell Monitoring Unit (CMU)
+        content: A 14 cell CMU with integrated balancing designed to be mounted to a modular carrier board, or connected to a battery cell interface via flat flex cable. 
+        image: /images/projects/CMU.jpg
+        featured:
+          name: More Information
+          link: ./projects/tsal
+        badges:
+          - Electronics
+          - Altium
+          - Voltage Clearances
+          - 4 Layer
+          - Pick and Place Assembly
+
+      - title: Battery PCB Fitout
+        content: A PCB based battery fitout, enabling neater and tighter interface to contactors and voltage/current measurement.
+        image: /images/projects/PCB Battery Fitout.png
+        featured:
+          name: More Information
+          link: ./projects/pcb-fitout
+        badges:
+          - Electronics
+          - Altium
+          - High Power
+
+      - title: CoffeeMate Smart Coffee Ecosystem
+        content: A joint project with Alistair English and Thomas Fraser for Mechatronics Design 3.
+        image: /images/projects/cofeemate ecosystem.jpg
+        featured:
+          name: More Information
+          link: ./projects/coffeemate
+        badges:
+          - Electronics
+          - Altium
+          - Integrated Battery
+          - ESP32
+          - Bluetooth
+
+      - title: Motor Control Communication Isolation
+        content: Isolated CAN interface and hall transceiver board. 
+        image: /images/projects/mciso.jpg
+        featured:
+          name: More Information
+          link: ./projects/mciso
+        badges:
+          - Electronics
+          - Altium
+          - 2 Layer
+
+      - title: QEV-3 Harness Upgrade
+        content: Isolated CAN interface and hall transceiver board. 
+        image: /images/projects/harness chain integration.jpg
+        featured:
+          name: More Information
+          link: ./projects/mciso
+        badges:
+          - Electronics
+          - Altium
+          - 2 Layer
+
+
+      - title: Motor Dyno Testing
+        content: Dyno testing of QEV-3 motors with new inverters to characterise control and build a model of thermal limitations.
+        image: /images/projects/motor_dyno.jpg
+        # featured:
+        #   name: More Information
+        #   link: ./projects/tsal
+        # badges:
+        #   - Electronics
+        #   - Altium
+        #   - Microcontroller
+
 
   #Contact
   contact:
