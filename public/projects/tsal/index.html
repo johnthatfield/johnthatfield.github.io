@@ -288,9 +288,56 @@ Tractive System Active Light (TSAL) | John Hatfield Portfolio
           <h1 id="introduction">Introduction</h1>
 <p>The tractive system active light (TSAL) in FSAE requires a flashing red light on top of the vehicle when the bus voltage is greater than 60V. When the voltage is below zero the light should be solid green indicating a safe state.</p>
 <p>The TSAL must be visible in daylight from a distance, meaning fairly high powered LEDs are required. The team has an LED board designed for the top of the vehicle which requires 600mA.</p>
-<h3 id="location-in-vehicle">Location In Vehicle</h3>
+<h2 id="location-in-vehicle">Location In Vehicle</h2>
 <p>An important design factor. Traditionally QUT Motorsport placed their TSAL control board in the battery assembly on the vehicle side of the DC contactors. However, with the battery pack removed there is still a large capacitance in the vehicle at the motor controllers that could remain live for 10+ minutes if the discharge system fails. For this reason, the decision was made to place the TSAL control in the vehicle junction box, meaning the TSAL will show accurate tractive system voltage stage even with the battery pack removed.</p>
-<h1 id="solution">Solution</h1>
+<h1 id="design-requirements">Design Requirements</h1>
+<h2 id="fsae-rules-2023">FSAE Rules 2023</h2>
+<h3 id="tsal-rules">TSAL Rules</h3>
+<p>Analysis of relevant rules for TSAL Control circuitry</p>
+<ul>
+<li>EV.6.9.1a - TSAL PCB must be located on the vehicle side of the accumulator, as it must always function when GLV system is energised. The GLV system is defined without the accumulator.</li>
+<li>EV.6.9.1b - Logic/analog circuitry must be used. No programmable microcontrollers/logic.</li>
+<li>EV.6.9.1c - only contain TSAL circuitry. i.e. the same threshold trigger cannot be used to trigger the voltage indicator in the accumulator for example.</li>
+<li>EV.6.9.3 - Output a flashing red LED signal (2-5 Hz) when the the voltage of the DC rails in the vehicle exceeds 60V</li>
+<li>EV.6.9.4 - Output a solid green LED signal when the voltage of the DC rails in the vehicle is below 60V</li>
+</ul>
+<!-- ![TSAL FSAE Ruleset 2023](/images/tsal/TSALRules.png "TSAL FSAE Ruleset 2023") -->
+<div style="text-align: center;">
+<img src="/images/tsal/TSALRules.png" alt="TSAL FSAE Ruleset 2023" style="max-width: 800px;"/>
+</div>
+<h3 id="voltage-separation">Voltage Separation</h3>
+<ul>
+<li>The GLV and the Tractive circuits must be galvanically isolated</li>
+</ul>
+<div style="text-align: center;">
+<img src="/images/tsal/FSAERuleVoltageSeparation.png" alt="Voltage Separation FSAE Ruleset 2023" style="max-width: 800px;"/>
+</div>
+<h3 id="pcb-clearance">PCB Clearance</h3>
+<ul>
+<li>12.7mm clearance over uncoated surface, or 4mm clearance under conformal coating</li>
+</ul>
+<div style="text-align: center;">
+<img src="/images/tsal/GLVTSClearance.png" alt="Clearance FSAE Ruleset 2023" style="max-width: 800px;"/>
+</div>
+<h2 id="ipc-design-requirements-for-ts-to-ts-clearances">IPC Design Requirements for TS to TS clearances</h2>
+<ul>
+<li>3mm clearance over surface for non conformal coated 600V nets</li>
+<li>1.105mm clearance over surface for conformal coated 600V nets</li>
+</ul>
+<h2 id="team-design-requirements">Team Design Requirements</h2>
+<ul>
+<li>The LED assembly on the roll hoop should only contain the LEDs. All drivers and control circuitry should be present on the TSAL Control board. This keeps the housing small and minimises heat and complexity in the roll hoop housing</li>
+<li>The LED drivers shall run on a voltage between 11V and 14.6V as the 12V LiFePO4 battery in the vehicle will power the board.</li>
+<li>Switch mode LED drivers should be used for their high efficiency compared to linear drivers - important with the varying GLV voltage.</li>
+<li>Red and green status indicators on PCB to display red/green status without external LED board connected</li>
+</ul>
+<h1 id="design-solution">Design Solution</h1>
+<p><img src="/images/tsal/Cropped_TSAL.jpg" alt="TSAL" title="TSAL"></p>
+<h1 id="schematics---rev-d">Schematics - Rev D</h1>
+<h2 id="tsal-control">TSAL Control</h2>
+<p><img src="/images/tsal/TSAL_Control.png" alt="TSAL Control" title="TSAL Control"></p>
+<h2 id="led-driver">LED Driver</h2>
+<p><img src="/images/tsal/TSAL_LEDDriver.png" alt="TSAL LED Driver" title="TSAL LED Driver"></p>
 
           </article>
         </div>
