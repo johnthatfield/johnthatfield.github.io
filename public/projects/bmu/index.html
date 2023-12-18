@@ -29,7 +29,8 @@
 
 
 <meta property="og:title" content="Battery Management Unit (BMU)" />
-<meta property="og:description" content="Coming Soon " />
+<meta property="og:description" content="Introduction Battery Management Unit
+Talks to slave cell monitoring units (CMUs) over IsoSPI Filters and monitors reported cell voltages and tempeatures Runs cell balancing algorithm Interface to charger to put BMU in charge state and take commands from charger about when to pre-charge Has shutdown interface for Insulation Monitoring Device (IMD), precharge resistor thermal sensor (PDOC), connector interlocks, and BMU battery state. Detection for these interfaces. Joint project with Jarrod Fisher." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.org/projects/bmu/" /><meta property="article:section" content="projects" />
 <meta property="article:published_time" content="2023-12-17T16:56:51+01:00" />
@@ -37,7 +38,8 @@
 
 
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Battery Management Unit (BMU)"/>
-<meta name="twitter:description" content="Coming Soon "/>
+<meta name="twitter:description" content="Introduction Battery Management Unit
+Talks to slave cell monitoring units (CMUs) over IsoSPI Filters and monitors reported cell voltages and tempeatures Runs cell balancing algorithm Interface to charger to put BMU in charge state and take commands from charger about when to pre-charge Has shutdown interface for Insulation Monitoring Device (IMD), precharge resistor thermal sensor (PDOC), connector interlocks, and BMU battery state. Detection for these interfaces. Joint project with Jarrod Fisher."/>
 
 
 <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
@@ -283,7 +285,47 @@ Battery Management Unit (BMU) | John Hatfield Portfolio
           </div>
           
           <article class="page-content  p-2">
-          <h2 id="coming-soon">Coming Soon</h2>
+          <h1 id="introduction">Introduction</h1>
+<p>Battery Management Unit</p>
+<ul>
+<li>Talks to slave cell monitoring units (CMUs) over IsoSPI</li>
+<li>Filters and monitors reported cell voltages and tempeatures</li>
+<li>Runs cell balancing algorithm</li>
+<li>Interface to charger to put BMU in charge state and take commands from charger about when to pre-charge</li>
+<li>Has shutdown interface for Insulation Monitoring Device (IMD), precharge resistor thermal sensor (PDOC), connector interlocks, and BMU battery state. Detection for these interfaces.</li>
+</ul>
+<p>Joint project with Jarrod Fisher.</p>
+<h1 id="design-requirements">Design Requirements</h1>
+<h2 id="fsae-rules-2023">FSAE Rules 2023</h2>
+<h3 id="bmu-rules">BMU Rules</h3>
+<h3 id="voltage-separation">Voltage Separation</h3>
+<ul>
+<li>The GLV and the Tractive circuits must be galvanically isolated</li>
+</ul>
+<div style="text-align: center;">
+<img src="/images/tsal/FSAERuleVoltageSeparation.png" alt="Voltage Separation FSAE Ruleset 2023" style="max-width: 800px;"/>
+</div>
+<h3 id="pcb-clearance">PCB Clearance</h3>
+<ul>
+<li>12.7mm clearance over uncoated surface, or 4mm clearance under conformal coating</li>
+</ul>
+<div style="text-align: center;">
+<img src="/images/tsal/GLVTSClearance.png" alt="Clearance FSAE Ruleset 2023" style="max-width: 800px;"/>
+</div>
+<h2 id="ipc-design-requirements-for-ts-to-ts-clearances">IPC Design Requirements for TS to TS clearances</h2>
+<ul>
+<li>3mm clearance over surface for non conformal coated 600V nets</li>
+<li>1.105mm clearance over surface for conformal coated 600V nets</li>
+</ul>
+<h2 id="team-design-requirements">Team Design Requirements</h2>
+<p>In Progress</p>
+<h1 id="design-solution">Design Solution</h1>
+<p><img src="/images/bmu/BMU_Cropped.jpg" alt="BMU" title="BMU"></p>
+<h1 id="pcb-layout">PCB Layout</h1>
+<p>Layer view - Ground plane layers Mid Top and Mid Bottom hidden
+<img src="/images/bmu/BMULayerView.png" alt="BMU" title="BMU"></p>
+<h1 id="schematics">Schematics</h1>
+<p>In Progress</p>
 
           </article>
         </div>
