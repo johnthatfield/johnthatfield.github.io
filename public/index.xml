@@ -27,7 +27,7 @@
       <link>https://example.org/projects/cmu/</link>
       <pubDate>Sun, 17 Dec 2023 16:56:51 +0100</pubDate>
       <guid>https://example.org/projects/cmu/</guid>
-      <description>Coming Soon </description>
+      <description>Introduction Cell Monitoring Unit&#xA;Talks to slave cell monitoring units (CMUs) over IsoSPI Filters and monitors reported cell voltages and tempeatures Runs cell balancing algorithm Interface to charger to put BMU in charge state and take commands from charger about when to pre-charge Has shutdown interface for Insulation Monitoring Device (IMD), precharge resistor thermal sensor (PDOC), connector interlocks, and BMU battery state. Detection for these interfaces. Joint project with Thomas Hulbert.</description>
     </item>
     <item>
       <title>CoffeeMate Coffee Ecosystem</title>

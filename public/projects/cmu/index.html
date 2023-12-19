@@ -29,7 +29,8 @@
 
 
 <meta property="og:title" content="Cell Monitoring Unit (CMU)" />
-<meta property="og:description" content="Coming Soon " />
+<meta property="og:description" content="Introduction Cell Monitoring Unit
+Talks to slave cell monitoring units (CMUs) over IsoSPI Filters and monitors reported cell voltages and tempeatures Runs cell balancing algorithm Interface to charger to put BMU in charge state and take commands from charger about when to pre-charge Has shutdown interface for Insulation Monitoring Device (IMD), precharge resistor thermal sensor (PDOC), connector interlocks, and BMU battery state. Detection for these interfaces. Joint project with Thomas Hulbert." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.org/projects/cmu/" /><meta property="article:section" content="projects" />
 <meta property="article:published_time" content="2023-12-17T16:56:51+01:00" />
@@ -37,7 +38,8 @@
 
 
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Cell Monitoring Unit (CMU)"/>
-<meta name="twitter:description" content="Coming Soon "/>
+<meta name="twitter:description" content="Introduction Cell Monitoring Unit
+Talks to slave cell monitoring units (CMUs) over IsoSPI Filters and monitors reported cell voltages and tempeatures Runs cell balancing algorithm Interface to charger to put BMU in charge state and take commands from charger about when to pre-charge Has shutdown interface for Insulation Monitoring Device (IMD), precharge resistor thermal sensor (PDOC), connector interlocks, and BMU battery state. Detection for these interfaces. Joint project with Thomas Hulbert."/>
 
 
 <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
@@ -283,7 +285,95 @@ Cell Monitoring Unit (CMU) | John Hatfield Portfolio
           </div>
           
           <article class="page-content  p-2">
-          <h2 id="coming-soon">Coming Soon</h2>
+          <h1 id="introduction">Introduction</h1>
+<p>Cell Monitoring Unit</p>
+<ul>
+<li>Talks to slave cell monitoring units (CMUs) over IsoSPI</li>
+<li>Filters and monitors reported cell voltages and tempeatures</li>
+<li>Runs cell balancing algorithm</li>
+<li>Interface to charger to put BMU in charge state and take commands from charger about when to pre-charge</li>
+<li>Has shutdown interface for Insulation Monitoring Device (IMD), precharge resistor thermal sensor (PDOC), connector interlocks, and BMU battery state. Detection for these interfaces.</li>
+</ul>
+<p>Joint project with Thomas Hulbert.</p>
+<h1 id="design-requirements">Design Requirements</h1>
+<h2 id="fsae-rules-2023">FSAE Rules 2023</h2>
+<h3 id="cmu-ams-rules">CMU (AMS) Rules</h3>
+<p>At QUT Motorsport we refer to the &lsquo;Accumulator Management System&rsquo; as a combination of the BMU (battery monitoring unit) and CMU (cell monitoring units)</p>
+<p>The relevant rules from below are</p>
+<ul>
+<li>The AMS system must have galvanic isolation at every segment to segment boundary - i.e. isolation transformers</li>
+<li>Work in progress</li>
+</ul>
+<div style="text-align: center;">
+<img src="/images/bmu/Rules_AMS.png" alt="AMS FSAE Ruleset 2023" style="max-width: 800px;"/>
+</div>
+<!-- ### Voltage Separation
+- The GLV and the Tractive circuits must be galvanically isolated 
+
+<div style="text-align: center;">
+<img src="/images/tsal/FSAERuleVoltageSeparation.png" alt="Voltage Separation FSAE Ruleset 2023" style="max-width: 800px;"/>
+</div> -->
+<!-- ### PCB Clearance
+- 12.7mm clearance over uncoated surface, or 4mm clearance under conformal coating
+<div style="text-align: center;">
+<img src="/images/tsal/GLVTSClearance.png" alt="Clearance FSAE Ruleset 2023" style="max-width: 800px;"/>
+</div> -->
+<h2 id="ipc-design-requirements-for-ts-to-ts-clearances">IPC Design Requirements for TS to TS clearances</h2>
+<p>On surface of uncoated PCB</p>
+<ul>
+<li>0.6mm spacing between nets &gt;=31V potential to each other</li>
+<li>0.1mm spacing for nets &lt;= 30V potential to each other</li>
+</ul>
+<h2 id="team-design-requirements">Team Design Requirements</h2>
+<h1 id="revision-b---qev-3-only">Revision B - QEV-3 Only</h1>
+<p>A long time solution of a &lsquo;Revision A&rsquo; BMU strategy, using a BMU chip, a microcontroller and canbus between each slave device was used. We had some systemic issues with this which caused the upgrade.</p>
+<p>The revision A of the CMU was designed to interface in the same position as the previous generation QEV-3 BMS system. It would feature only 10 out of 14 cells.</p>
+<p>Assembly of this device is shown below. The pototypes were hand placed at uni and soldered in a vapour phase oven.
+<img src="/images/cmu/cmu_rev_b_placed.jpg" alt="CMU Rev B Assembly" title="CMU Rev B Assembly"></p>
+<!-- 
+Testing of the Revision B CMUs. Two CMUs, one connected to a battery, one connected to a battery emulator board, 
+
+![CMU Rev B Testing](/images/cmu/cmu_rev_b_testing.jpg "CMU Rev B Testing") -->
+<p>An implementation error with unused voltage taps was found - a fix was prototyped on the PCB as shown in the photo below.
+<img src="/images/cmu/cmu_rev_b.jpg" alt="CMU Rev B" title="CMU Rev B"></p>
+<h1 id="revision-c">Revision C</h1>
+<p>It was decided that the same CMU architecture should be used for the new vehicle - QEV-4. All 14 cells are required for QEV-4, so a 14 cell CMU should be designed and un-used cells tied together as per the datasheet.</p>
+<p>Below shown is the full implementation of the L9963E cell monitoring unit. It was designed around a small, double sided component load form factor, enabling it to fit atop of the small QEV-4 battery assembly.</p>
+<p>A board to board connector was chosne, enabling it to either sit atop of a carrier PCB, or, connected with a custom flat flex cable.</p>
+<div style="text-align: center;">
+<img src="/images/cmu/CMU_Altium.png" alt="CMU Altium" style="max-width: 800px;"/>
+</div>
+<h2 id="prototype-assembly">Prototype Assembly</h2>
+<p>Prototypes were assembled by hand and reflowed in a vapour phase oven.</p>
+<div style="text-align: center;">
+<img src="/images/cmu/cmu_rev_c_hand_assembly_camera2.jpg" alt="CMU Altium" style="max-width: 800px;"/>
+</div>
+<h2 id="prototype-testing">Prototype testing</h2>
+<p>The initial prototypes were then thoroughly tested using a breakout board to validate cell voltage readings and temperature analog inputs.</p>
+<div style="text-align: center;">
+<img src="/images/cmu/CMU_rev_c_test_assembly.png" alt="CMU Rev C Test Assembly" style="max-width: 600px;"/>
+</div>
+<h2 id="qev-3-adaptor">QEV-3 Adaptor</h2>
+<p>The adaptor for the previous generation car shown below connects the 10 cells, tying the remaining 4 cells together. It also has a temperature multiplexer to enable the CMU to read more tempearture cells for the larger battery assembly.</p>
+<div style="text-align: center;">
+<img src="/images/cmu/cmu_qev3_carrier.jpg" alt="CMU Carrier QEV-3" style="max-width: 800px;"/>
+</div>
+<h2 id="pick-and-place-assembly">Pick and place assembly</h2>
+<p>We then worked with our pick and place sponsor, Taylormade Electronics, to pick and place enough CMU&rsquo;s for QEV-3, QEV-4 and several spares. Working with Cameron from Taylormade Electronics has been an invaluable experience. It has enabled my understanding of the full design and assembly lifecycle, seeing first hand impacts of design decisions and changes on ease of assembly and reliability.</p>
+<h3 id="solder-paste-application">Solder Paste Application</h3>
+<div style="text-align: center;">
+<img src="/images/cmu/cmu_paste.jpg" alt="CMU Solder Paste Application" style="max-width: 600px;"/>
+</div>
+<h3 id="pick-and-place-setup">Pick and Place Setup</h3>
+<div style="text-align: center;">
+<img src="/images/cmu/cmu_pick_place_setup.jpg" alt="CMU Pick and Place Setup" />
+</div>
+<h3 id="assembled-cmus">Assembled CMUs</h3>
+<div style="text-align: center;">
+<img src="/images/cmu/cmu_assembled.jpg" alt="CMU Assembled" style="max-width: 600px;"/>
+</div>
+<h1 id="schematics">Schematics</h1>
+<p>Not published. Please contact me for more information.</p>
 
           </article>
         </div>
