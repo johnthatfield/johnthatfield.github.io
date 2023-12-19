@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vehicle Control Unit (VCU) on John Hatfield Portfolio</title>
-    <link>https://example.org/projects/vcu/</link>
-    <description>Recent content in Vehicle Control Unit (VCU) on John Hatfield Portfolio</description>
+    <title>Vehicle Control Unit (VCU) on John Hatfield | Portfolio</title>
+    <link>https://johnthatfield.github.io/projects/vcu/</link>
+    <description>Recent content in Vehicle Control Unit (VCU) on John Hatfield | Portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 17 Dec 2023 16:56:51 +0100</lastBuildDate>
-    <atom:link href="https://example.org/projects/vcu/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://johnthatfield.github.io/projects/vcu/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
