@@ -297,7 +297,32 @@ Battery Management Unit (BMU) | John Hatfield Portfolio
 <p>Joint project with Jarrod Fisher.</p>
 <h1 id="design-requirements">Design Requirements</h1>
 <h2 id="fsae-rules-2023">FSAE Rules 2023</h2>
-<h3 id="bmu-rules">BMU Rules</h3>
+<h3 id="bmu-ams-rules">BMU (AMS) Rules</h3>
+<p>At QUT Motorsport we refer to the &lsquo;Accumulator Management System&rsquo; as it&rsquo;s industry standard term Battery Management Unit (BMU).</p>
+<p>Some of the relevant rules are shown below, however, most of them pertain to software on the BMU, with the two core requirements from this for the BMU being</p>
+<ol>
+<li>The BMU can communicate with the cell montoring units which monitor the cell voltages</li>
+<li>The BMU is able to trip the shutdown circuit using a relay when there is a fault condition in software</li>
+<li>It must turn on an indicator light when there is a fault condition. For the revision B of this board, this should be implemented in hardware as it&rsquo;s ambigious if the rules specify that you can have software implementations of the dash LEDs.</li>
+</ol>
+<div style="text-align: center;">
+<img src="/images/bmu/Rules_AMS.png" alt="AMS FSAE Ruleset 2023" style="max-width: 800px;"/>
+</div>
+<h3 id="imd-rules">IMD Rules</h3>
+<p>The Insulation Monitoring Device (IMD) is also present in the accumulator. It has a high side 12V status signal if the measurement is good. From this we can derive the requirements</p>
+<ol>
+<li>There must be a relay present in the accumulator to trip the shutdown circuit in the event this OKhs is not high</li>
+<li>It must not use any programmable logic</li>
+<li>It must turn on an indicator light when there is a fault condition.</li>
+</ol>
+<div style="text-align: center;">
+<img src="/images/bmu/Rules_IMD.png" alt="IMD FSAE Ruleset 2023" style="max-width: 800px;"/>
+</div>
+<h3 id="shutdown-circuit">Shutdown Circuit</h3>
+<p>The output of the vehicles latched safety shutdown circuit must power the highside of the contactors. This means that if the vehicle loses power or any shutdown segment opens, then the contactors will open.</p>
+<div style="text-align: center;">
+<img src="/images/bmu/Rules_SHDNCircuit.png" alt="IMD FSAE Ruleset 2023" style="max-width: 800px;"/>
+</div>
 <h3 id="voltage-separation">Voltage Separation</h3>
 <ul>
 <li>The GLV and the Tractive circuits must be galvanically isolated</li>
@@ -318,14 +343,42 @@ Battery Management Unit (BMU) | John Hatfield Portfolio
 <li>1.105mm clearance over surface for conformal coated 600V nets</li>
 </ul>
 <h2 id="team-design-requirements">Team Design Requirements</h2>
-<p>In Progress</p>
-<h1 id="design-solution">Design Solution</h1>
+<ol>
+<li>Software detection of all shutdown circuits for relaying over telemetry and debugging.</li>
+<li>Individual control of all 3 contactors using lowside MOSFETs for ease of driving from MCU.</li>
+<li>One charger detection loop to detect when plugged into a charger</li>
+<li>E-Fuse on 12V power input - under voltage, over voltage and over current limit</li>
+<li>SD Card for logging of battery data and keeping state</li>
+<li>2x IsoSPI interfaces to the cell monitoring unit allowing for a redundant entry point to the IsoSPI chain - L9963E</li>
+<li>Connector to interface all signals to IMD. This should be the IMD&rsquo;s only connection to GLV.</li>
+<li>A connector to interface power and 2x CANbus to the Sendyne. This should be the Sendyne&rsquo;s only connection to GLV.</li>
+<li>Use Wurth solder in standoffs so there is no compression/bending load on the PCB when mounted in the accumulator</li>
+<li>USB C for debugging and programming</li>
+<li>JTAG for debugging and programming</li>
+<li>2x Indicator LEDs for status</li>
+<li>2x CANbus interfaces, enabling one to be connected to the 1Mbaud vehicle bus, and the other to the Sendyne which only operates at 500Kbaud</li>
+</ol>
+<h3 id="rev-b-additional-requirements">Rev B Additional Requirements</h3>
+<ol>
+<li>Latching of IMD, PDOC and BMU shutdown segments until a reset button is pushed</li>
+<li>Current limited highside outputs for Dash LEDs implemented with non-programmable circuitry</li>
+<li>Detection and measurement of the highside contactor shutdown input status so BMU can measure if operating contactors is possible</li>
+<li>Detection of auxiliary coils of the contactors for contactor state detection and fault measurement.</li>
+<li>Two charger detection loops, one for detection of plugged into charger and one for precharge start.</li>
+</ol>
+<h1 id="design-solution---rev-a">Design Solution - Rev A</h1>
 <p><img src="/images/bmu/BMU_Cropped.jpg" alt="BMU" title="BMU"></p>
-<h1 id="pcb-layout">PCB Layout</h1>
+<h1 id="pcb-layout---rev-a">PCB Layout - Rev A</h1>
 <p>Layer view - Ground plane layers Mid Top and Mid Bottom hidden
 <img src="/images/bmu/BMULayerView.png" alt="BMU" title="BMU"></p>
 <h1 id="schematics">Schematics</h1>
-<p>In Progress</p>
+<p>Not published.</p>
+<h1 id="assembly">Assembly</h1>
+<p>The BMUs were hand placed and soldered in a vapour phase oven.</p>
+<p>Rails were placed on the long edge of the PCB in the event we wanted to pick and place these as there are components close to the board edge.</p>
+<div style="text-align: center;">
+<img src="/images/bmu/bmu_reflow.jpg" alt="BMU Reflow" />
+</div>
 
           </article>
         </div>
