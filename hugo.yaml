@@ -22,6 +22,9 @@ markup:
     renderer:
       unsafe: true
 
+
+customCSS: true
+
 # Menus:
 #   main:
 #     - identifier: blog
